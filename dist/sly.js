@@ -1,6 +1,6 @@
 /*!
- * sly 1.2.2 - 18th Nov 2013
- * https://github.com/Darsain/sly
+ * sly 1.2.2 - 17th Dec 2013
+ * https://github.com/darsain/sly
  *
  * Licensed under the MIT license.
  * http://opensource.org/licenses/MIT
@@ -1400,7 +1400,7 @@
 		 */
 		function dragHandler(event) {
 			dragging.released = event.type === 'mouseup' || event.type === 'touchend';
-			dragging.pointer = dragging.touch && event.type.indexOf('touch') == 0 ? event.originalEvent[dragging.released ? 'changedTouches' : 'touches'][0] : event;
+			dragging.pointer = dragging.touch && event.type.indexOf('touch') === 0 ? event.originalEvent[dragging.released ? 'changedTouches' : 'touches'][0] : event;
 			dragging.pathX = dragging.pointer.pageX - dragging.initX;
 			dragging.pathY = dragging.pointer.pageY - dragging.initY;
 			dragging.path = Math.sqrt(Math.pow(dragging.pathX, 2) + Math.pow(dragging.pathY, 2));
